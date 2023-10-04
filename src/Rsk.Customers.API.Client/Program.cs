@@ -1,8 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Refit;
 
 var serviceCollection =new ServiceCollection();
-serviceCollection.AddHttpClient<ICustomerService, CustomerService>();
+serviceCollection.AddRefitClient<ICustomersAPI>()
+    .ConfigureHttpClient(c =>c.BaseAddress =new Uri("http://localhost:5111"));
+
 var serviceProvider = serviceCollection.BuildServiceProvider();
-var customerService =serviceProvider.GetRequiredService<ICustomerService>();
-var customer =await customerService.GetCustomer(1);
+var customersAPI =serviceProvider.GetRequiredService<ICustomersAPI>();
+var customer =await customersAPI.GetCustomer(1);
 Console.ReadKey();
