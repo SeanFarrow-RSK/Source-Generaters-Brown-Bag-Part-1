@@ -5,7 +5,7 @@ namespace Rsk.Customers.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class CustomersController : ControllerBase
+public partial class CustomersController : ControllerBase
 {
     private readonly ILogger<CustomersController> logger;
     private readonly HashSet<Customer> customers = new(new [] {new Customer(1, "Sean", "Farrow", "17594")});
@@ -18,15 +18,21 @@ public class CustomersController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IActionResult Get(int id)
     {
-        logger.LogDebug("Attempting to retrieve a customer with id {customerID}", id);
+        LogCustomerRetrievalAttempt(id);
         var customer = customers.FirstOrDefault(x =>x.Id ==id);
         if (customer == null)
         {
-            logger.LogDebug("A customer with id {customerID} was not found.", id);
+LogCustomerRetrievalFailure(id);
             return NotFound(id);
         }
 
         return Ok(customer);
     }
+
+    [LoggerMessage(0, LogLevel.Debug, "Attempting to retrieve a customer with id {customerID}.")]
+    partial void LogCustomerRetrievalAttempt(int customerID);
+
+    [LoggerMessage(0, LogLevel.Debug, "A customer with id {customerID} was not found.")]
+    partial void LogCustomerRetrievalFailure(int customerID);
 }
 
