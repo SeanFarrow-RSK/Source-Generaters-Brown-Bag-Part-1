@@ -32,7 +32,7 @@ LogCustomerRetrievalFailure(id);
     [LoggerMessage(0, LogLevel.Debug, "Attempting to retrieve a customer with id {customerID}.")]
     partial void LogCustomerRetrievalAttempt(int customerID);
 
-    [LoggerMessage(0, LogLevel.Debug, "A customer with id {customerID} was not found.")]
+    [LoggerMessage(1, LogLevel.Debug, "A customer with id {customerID} was not found.")]
     partial void LogCustomerRetrievalFailure(int customerID);
 }
 
