@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rsk.Customers.API", "src\Rs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rsk.Customers.API.Client", "src\Rsk.Customers.API.Client\Rsk.Customers.API.Client.csproj", "{81A320D0-5341-4562-A824-2456CC9CFD65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rsk.Customers.API.Resources", "src\Rsk.Customers.API.Resources\Rsk.Customers.API.Resources.csproj", "{976947B7-AC6A-46B2-AFC5-C89183115044}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{81A320D0-5341-4562-A824-2456CC9CFD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81A320D0-5341-4562-A824-2456CC9CFD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81A320D0-5341-4562-A824-2456CC9CFD65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{976947B7-AC6A-46B2-AFC5-C89183115044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{976947B7-AC6A-46B2-AFC5-C89183115044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{976947B7-AC6A-46B2-AFC5-C89183115044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{976947B7-AC6A-46B2-AFC5-C89183115044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5F8113BF-BFA4-490F-B514-E97B8D42C2BE} = {5B6373E3-B67C-4AB0-A59F-C48338C30DFC}
 		{81A320D0-5341-4562-A824-2456CC9CFD65} = {5B6373E3-B67C-4AB0-A59F-C48338C30DFC}
+		{976947B7-AC6A-46B2-AFC5-C89183115044} = {5B6373E3-B67C-4AB0-A59F-C48338C30DFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8F429A4-3F74-4E2A-A241-FFA20AC665BB}
