@@ -5,12 +5,7 @@ using System.Text.Json;
 using Rsk.Customers.API.Resources;
 
 var serviceCollection =new ServiceCollection();
-var options = new JsonSerializerOptions();
-options.AddContext<CustomersJsonSourceGenerationContext>();
-serviceCollection.AddRefitClient<ICustomersAPI>(new RefitSettings
-{
-        ContentSerializer = new SystemTextJsonContentSerializer(options)
-})
+serviceCollection.AddRefitClient<ICustomersAPI>()
     .ConfigureHttpClient(c =>c.BaseAddress =new Uri("http://localhost:5111"));
     
 
