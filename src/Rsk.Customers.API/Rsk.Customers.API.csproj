@@ -11,6 +11,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
-  <Import Project="..\Rsk.Customers.API.Resources\Rsk.Customers.API.Resources.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\Rsk.Customers.API.Client\Rsk.Customers.API.Client.csproj" />
+  </ItemGroup>
 
 </Project>

@@ -12,4 +12,11 @@ serviceCollection.AddRefitClient<ICustomersAPI>()
 var serviceProvider = serviceCollection.BuildServiceProvider();
 var customersAPI =serviceProvider.GetRequiredService<ICustomersAPI>();
 var customer =await customersAPI.GetCustomer(1);
-Console.ReadKey();
+if (customer is null)
+{
+    Console.WriteLine("No customer found.");
+}
+else
+{
+    Console.WriteLine($"A customer with id {customer.Id} has been found.");
+}

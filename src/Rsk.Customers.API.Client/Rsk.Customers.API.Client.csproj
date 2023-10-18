@@ -16,7 +16,6 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
   </ItemGroup>
-
   <Import Project="..\Rsk.Customers.API.Resources\Rsk.Customers.API.Resources.projitems" Label="Shared" />
 
 </Project>
